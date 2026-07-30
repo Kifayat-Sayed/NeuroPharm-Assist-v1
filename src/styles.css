@@ -1,0 +1,193 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * NeuroPharm Assist — Clinical Design System
+ * All colors in oklch. Never hardcode colors in components.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-critical: var(--critical);
+  --color-critical-foreground: var(--critical-foreground);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans:
+    "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --shadow-card: var(--shadow-card-value);
+  --shadow-elevated: var(--shadow-elevated-value);
+  --shadow-focus: var(--shadow-focus-value);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Surfaces */
+  --background: oklch(0.985 0.004 240);
+  --foreground: oklch(0.22 0.03 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.03 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.03 250);
+
+  /* Brand — clinical blue */
+  --primary: oklch(0.52 0.14 245);
+  --primary-foreground: oklch(0.99 0.005 240);
+  --primary-soft: oklch(0.955 0.025 245);
+
+  --secondary: oklch(0.965 0.01 240);
+  --secondary-foreground: oklch(0.28 0.04 250);
+
+  --muted: oklch(0.965 0.008 240);
+  --muted-foreground: oklch(0.52 0.02 250);
+
+  /* Accent — calm teal */
+  --accent: oklch(0.94 0.04 195);
+  --accent-foreground: oklch(0.32 0.08 210);
+
+  /* Status */
+  --success: oklch(0.62 0.13 155);
+  --success-foreground: oklch(0.99 0 0);
+  --warning: oklch(0.78 0.14 75);
+  --warning-foreground: oklch(0.28 0.05 60);
+  --info: oklch(0.62 0.12 235);
+  --info-foreground: oklch(0.99 0 0);
+  --critical: oklch(0.58 0.22 27);
+  --critical-foreground: oklch(0.99 0 0);
+  --destructive: oklch(0.58 0.22 27);
+  --destructive-foreground: oklch(0.99 0 0);
+
+  /* Lines */
+  --border: oklch(0.925 0.008 245);
+  --border-strong: oklch(0.87 0.012 245);
+  --input: oklch(0.925 0.008 245);
+  --ring: oklch(0.52 0.14 245);
+
+  /* Charts */
+  --chart-1: oklch(0.52 0.14 245);
+  --chart-2: oklch(0.66 0.11 200);
+  --chart-3: oklch(0.62 0.13 155);
+  --chart-4: oklch(0.78 0.14 75);
+  --chart-5: oklch(0.58 0.22 27);
+
+  /* Sidebar */
+  --sidebar: oklch(0.995 0.003 240);
+  --sidebar-foreground: oklch(0.32 0.03 250);
+  --sidebar-primary: oklch(0.52 0.14 245);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.955 0.025 245);
+  --sidebar-accent-foreground: oklch(0.35 0.09 245);
+  --sidebar-border: oklch(0.93 0.008 245);
+  --sidebar-ring: oklch(0.52 0.14 245);
+
+  /* Shadows */
+  --shadow-card-value:
+    0 1px 2px -1px oklch(0.3 0.05 250 / 0.06),
+    0 2px 6px -2px oklch(0.3 0.05 250 / 0.06);
+  --shadow-elevated-value:
+    0 4px 16px -6px oklch(0.3 0.05 250 / 0.1),
+    0 10px 32px -12px oklch(0.3 0.05 250 / 0.08);
+  --shadow-focus-value: 0 0 0 3px oklch(0.52 0.14 245 / 0.18);
+}
+
+.dark {
+  --background: oklch(0.19 0.02 250);
+  --foreground: oklch(0.96 0.005 240);
+  --card: oklch(0.23 0.025 250);
+  --card-foreground: oklch(0.96 0.005 240);
+  --popover: oklch(0.23 0.025 250);
+  --popover-foreground: oklch(0.96 0.005 240);
+  --primary: oklch(0.7 0.13 240);
+  --primary-foreground: oklch(0.18 0.03 250);
+  --primary-soft: oklch(0.3 0.06 245);
+  --secondary: oklch(0.28 0.03 250);
+  --secondary-foreground: oklch(0.96 0.005 240);
+  --muted: oklch(0.28 0.03 250);
+  --muted-foreground: oklch(0.72 0.02 245);
+  --accent: oklch(0.32 0.05 210);
+  --accent-foreground: oklch(0.96 0.005 240);
+  --border: oklch(1 0 0 / 10%);
+  --border-strong: oklch(1 0 0 / 18%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.7 0.13 240);
+  --sidebar: oklch(0.22 0.025 250);
+  --sidebar-foreground: oklch(0.94 0.005 240);
+  --sidebar-primary: oklch(0.7 0.13 240);
+  --sidebar-primary-foreground: oklch(0.18 0.03 250);
+  --sidebar-accent: oklch(0.3 0.05 245);
+  --sidebar-accent-foreground: oklch(0.96 0.005 240);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.7 0.13 240);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html,
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.02em;
+  }
+}
