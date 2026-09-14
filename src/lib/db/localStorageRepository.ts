@@ -2,7 +2,7 @@ import type { Assessment, ClinicalSnapshot, Patient } from "@/features/clinical/
 import { seedSnapshot } from "@/features/clinical/seed";
 import type { ClinicalRepository } from "./repository";
 
-const STORAGE_KEY = "neuropharm.clinical.v2";
+const STORAGE_KEY = "neuropharm.clinical.v3";
 
 function emptySnapshot(): ClinicalSnapshot {
   return { patients: [], assessments: [] };
