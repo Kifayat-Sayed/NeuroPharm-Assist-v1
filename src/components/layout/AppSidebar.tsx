@@ -120,7 +120,7 @@ export function AppSidebar() {
       <SidebarFooter className="border-t border-sidebar-border">
         <div className="flex items-center gap-3 px-2 py-2 group-data-[collapsible=icon]:hidden">
           <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-soft text-sm font-semibold text-primary">
-            SS
+            AU
           </div>
           <div className="min-w-0">
             <p className="truncate text-sm font-medium text-sidebar-foreground">Authorized User</p>
