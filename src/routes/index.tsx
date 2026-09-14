@@ -78,7 +78,7 @@ function DashboardPage() {
     <div className="mx-auto w-full max-w-[1400px] space-y-8 px-4 py-8 md:px-8">
       <PageHeader
         eyebrow="Clinical Research Overview"
-        title="Patient Assessments & medication-care activity"
+        title="Patient Assessments & Medication Care Activity"
         description={`${stats.totalAssessments} assessments recorded across ${stats.totalPatients} patients.`}
         actions={
           <>
