@@ -123,7 +123,7 @@ export function AppSidebar() {
             SS
           </div>
           <div className="min-w-0">
-            <p className="truncate text-sm font-medium text-sidebar-foreground">Authorized Research Access</p>
+            <p className="truncate text-sm font-medium text-sidebar-foreground">Authorized User</p>
             <p className="truncate text-[11px] text-muted-foreground">Clinical Pharmacy Team</p>
           </div>
         </div>
